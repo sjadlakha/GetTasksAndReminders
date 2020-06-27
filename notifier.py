@@ -3,7 +3,7 @@
 import os
 import time
 
-dbFile = "/Users/sahajadlakha/Documents/DEV_ZONE/PYTHON FILES/AutomateTheTasksReminder/db.txt"
+dbFile = "<path-to-db.txt>"
 
 
 def notify(title, text):
@@ -14,6 +14,7 @@ def notify(title, text):
 
 
 def GetData(DBFile):
+    """ Retrieving data from the text file. """
     Data = []
     with open(DBFile, 'r') as file:
         for line in file:
@@ -30,7 +31,7 @@ def main():
 
 
 def clearDB():
-    """ This function will empty the DataBase file for next data to come in. """
+    """ This function will empty the DataBase (text) file for next data to come in. """
     file = open(dbFile, 'w')
     file.close()
 
