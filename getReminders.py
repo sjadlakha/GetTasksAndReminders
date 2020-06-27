@@ -33,7 +33,8 @@ def GetReminders():
 def WriteDatatoFile(Data):
     """This function will write all the tasks to a text file."""
     if Data != None:
-        with open('/Users/sahajadlakha/Documents/DEV_ZONE/PYTHON FILES/AutomateTheTasksReminder/db.txt', 'a') as dataBaseFile:
+        # Enter the complete path for db.txt file
+        with open('<path-to-db.txt>', 'a') as dataBaseFile:
             for line in Data:
                 dataBaseFile.write(line+'\n')
 
