@@ -6,4 +6,4 @@
 
 
 # give the complete path of the getReminders.py file below
-python3 /Users/sahajadlakha/Documents/DEV_ZONE/'PYTHON FILES'/AutomateTheTasksReminder/getReminders.py
+python3 <path>/getReminders.py
