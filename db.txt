@@ -1,5 +1,0 @@
-do 4
-do 5
-do 6
-do 8
-do 9

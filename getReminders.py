@@ -4,35 +4,38 @@ import sys
 import datetime
 
 
-def GetTasksAndReminders():
+def GetReminders():
     """This function will ask the user to enter all the tasks and reminders that the user wants to be notified about as soon as he logs in the next time."""
-    response1=input("Got any tasks or reminders for the next session? \n(y/n)").lower()
+    response1 = input(
+        "Got any tasks or reminders for the next session? \n(y/n)").lower()
 
-    if response1=='n':
+    if response1 == 'n':
         print("Have a nice time developing!")
         return None
-    else:
-        print("^"*100)
+    elif response1 == 'y':
+        print("^"*50)
         print("Enter your tasks and reminders below:")
-        more=True
-        Data=[]
+        more = True
+        Data = []
         while(more):
             print("#"*10)
-            data = input("<*> ")
+            data = input("<:> ")
             Data.append(data.strip())
             response2 = input("Want to add more to your list? \n(y/n)").lower()
-            more = True if response2=='y' else False
-        
+            more = True if response2 == 'y' else False
+
         print("%"*100)
         print("Thanks, Have a nice day")
 
         return Data
 
+
 def WriteDatatoFile(Data):
     """This function will write all the tasks to a text file."""
-    if Data!=None:
-        with open('db.txt', 'a') as dataBaseFile:
+    if Data != None:
+        with open('/Users/sahajadlakha/Documents/DEV_ZONE/PYTHON FILES/AutomateTheTasksReminder/db.txt', 'a') as dataBaseFile:
             for line in Data:
                 dataBaseFile.write(line+'\n')
 
-WriteDatatoFile(GetTasksAndReminders())
+
+WriteDatatoFile(GetReminders())
