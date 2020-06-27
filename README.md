@@ -14,10 +14,11 @@ It uses AppleScript to notify.
     This file should be given execution permission as it commands to run the getReminders.py file in the terminal.
   #### startup.sh:
     To run the notifier.py script on startup we created a bash file that calls it runs on start up by enabling it to run on startup.
+  #### db.txt:
+    This text file stores the reminders everytime you enter them and its contents are cleared after you get notified.
  ##### Rest information regarding each function and file is present inside it.
  
 ### Flow :
     1. Run the SetReminders.sh file by double tapping it.
-    2. Set reminders in terminal
+    2. Set reminders in terminal.
     3. Next time you start your mac, you will receive a notification for each reminder.
- 
